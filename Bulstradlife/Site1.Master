@@ -1,0 +1,70 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Bulstradlife.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>BULSTRAD</title>
+    <script src="../scripts/jquery-3.0.0.min.js"></script>
+    <script src="../scripts/bootstrap.js"></script>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/custom.css" rel="stylesheet" />
+</head>
+<body style="background-color: #E5E5E5;">
+    <form id="form1" runat="server">
+        <div class="container bg-white">
+            <header>
+                <div class="row">
+                    <div class="col-md-3">
+                        <asp:Image ID="ImageHeaderLogo" runat="server" ImageUrl="~/images/Bulstrad_bg.jpg" CssClass="img-fluid float-left" />
+                    </div>
+                    <div class="col-md-9">
+                        <asp:Image ID="ImageHeaderBanner" runat="server" ImageUrl="~/images/banner1.png" CssClass="img-fluid float-right" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <nav class="navbar navbar-expand-md bg-light navbar-light">
+                            <!-- Toggler/collapsibe Button -->
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <!-- Navbar links -->
+                            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item">
+                                        <asp:ImageButton CssClass="ml-1" ID="ImBtn_Nachalo"  runat="server" PostBackUrl="~/nachalo.aspx"  ImageUrl="~/images/topm_bg_n1.gif" onmouseover="this.src='/images/topm_bg_o1.gif'" onmouseout="this.src='/images/topm_bg_n1.gif'"/>
+                                    </li>
+                                    <li class="nav-item">
+                                        <asp:ImageButton CssClass="ml-1" ID="ImBtn_Produkti_I_Uslugi"  runat="server" PostBackUrl="~/pages/produkti_i_uslugi.aspx" ImageUrl="~/images/topm_bg_n3.gif" onmouseover="this.src='/images/topm_bg_o3.gif'" onmouseout="this.src='/images/topm_bg_n3.gif'"/>
+                                    
+                                    </li>
+                                    <li class="nav-item">
+                                        <asp:ImageButton CssClass="ml-1" ID="ImBtn_Kontakti"  runat="server" PostBackUrl="~/pages/kontakti.aspx" ImageUrl="~/images/topm_bg_n5.gif" onmouseover="this.src='/images/topm_bg_o5.gif'" onmouseout="this.src='/images/topm_bg_n5.gif'"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <footer>
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="float-left small font-weight-light">Контакти | Техническа помощ | Юридическа информация</p>
+                        <p class="float-left small font-weight-light">Дизайн, разработка и Интернет маркетинг Bulstradlife.bg</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="float-right small font-weight-light">© 2018 Булстрад Живот. Всички права запазени.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
